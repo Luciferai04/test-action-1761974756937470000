@@ -20,7 +20,7 @@ Stryde solves this by treating LLMs not as content creators, but as **distributi
 
 ---
 
-##  System Architecture
+## 🏗 System Architecture
 
 Stryde is built as a **Client-Side SPA (Single Page Application)** that leverages the **Google Gemini API** as a serverless backend orchestrator.
 
@@ -28,24 +28,24 @@ Stryde is built as a **Client-Side SPA (Single Page Application)** that leverage
 
 ```mermaid
 graph TD
-    User[User / Brand Manager] -->|Interacts| UI[React Frontend (Stryde)]
-    UI -->|Orchestration Request| Gemini[Gemini 3 Pro (Orchestrator)]
+    User["User / Brand Manager"] -->|Interacts| UI["React Frontend (Stryde)"]
+    UI -->|Orchestration Request| Gemini["Gemini 3 Pro (Orchestrator)"]
     
     subgraph "The Intelligence Layer"
-        Gemini -->|1. Generate Probes| Probes[User Queries]
-        Gemini -->|2. Audit Responses| Audit[Visibility & Accuracy Scoring]
-        Gemini -->|3. Generate Code| Code[JSON-LD / Schema Assets]
+        Gemini -->|1. Generate Probes| Probes["User Queries"]
+        Gemini -->|2. Audit Responses| Audit["Visibility & Accuracy Scoring"]
+        Gemini -->|3. Generate Code| Code["JSON-LD / Schema Assets"]
     end
 
     subgraph "Multi-LLM Simulation"
-        Probes -->|Fetch/Simulate| ModelA[Gemini 3 Pro]
-        Probes -->|Fetch/Simulate| ModelB[GPT-4.1]
-        Probes -->|Fetch/Simulate| ModelC[Claude 3.5]
-        Probes -->|Fetch/Simulate| ModelD[Perplexity Sonar]
+        Probes -->|Fetch/Simulate| ModelA["Gemini 3 Pro"]
+        Probes -->|Fetch/Simulate| ModelB["GPT-4.1"]
+        Probes -->|Fetch/Simulate| ModelC["Claude 3.5"]
+        Probes -->|Fetch/Simulate| ModelD["Perplexity Sonar"]
     end
 
     ModelA & ModelB & ModelC & ModelD -->|Raw Responses| Audit
-    Audit -->|Calculated Metrics| Dashboard[UI Dashboard]
+    Audit -->|Calculated Metrics| Dashboard["UI Dashboard"]
 ```
 
 ### The Visibility Scan Workflow
@@ -80,7 +80,7 @@ sequenceDiagram
 
 ---
 
-##  Features Breakdown
+## 📦 Features Breakdown
 
 ### 1. The Command Dashboard
 A real-time view of your **AI Visibility Score**.
@@ -107,7 +107,7 @@ Converts metrics into engineering tasks.
 
 ---
 
-##  Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 *   Node.js (v18+)
@@ -156,7 +156,7 @@ Converts metrics into engineering tasks.
 
 ---
 
-##  Design System
+## 🎨 Design System
 
 Stryde uses a sophisticated "Dark Mode" aesthetic tailored for enterprise dashboards.
 
@@ -169,3 +169,4 @@ Stryde uses a sophisticated "Dark Mode" aesthetic tailored for enterprise dashbo
 ## 📄 License
 
 Proprietary Demo Software. Created for educational and demonstration purposes regarding AI Distribution Optimization.
+
